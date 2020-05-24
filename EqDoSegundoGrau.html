@@ -1,0 +1,38 @@
+  <!DOCTYPE html>
+
+  <html lang="pt-br">
+   <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   </head>
+   <body style="background-color:#87CEFA;">
+  <p><h1 style="text-align: center;">Resolução de equação do segundo grau</h1></p>
+
+  <p style="text-align: center;"> <button onclick="raiz()">Clique aqui</button></p>
+   
+   <script>
+   function raiz(){
+   var a=prompt("Digite o coeficiente a: ")
+   while (a==0){
+   alert("Digite um valor de a diferente de ZERO")
+   var a=prompt("DIGITE O COEFICIENTE a: ")
+   }
+   var b=prompt("Digite o coeficiente b: ")
+   var c=prompt("Digite o coeficiente c: ")
+    delta = Math.pow(b,2) - 4*a*c
+    if(delta<0){
+     alert("Delta é menor que zero.\nNÃO EXISTEM RAÍZES REAIS")   
+   }else if (delta == 0){
+    x=(-b+Math.sqrt(delta))/(2*a)
+    alert("Delta é igual a zero, portanto teremos duas raízes reais e  iguais a "+x)
+   }else{
+   x1=(-b-Math.sqrt(delta))/(2*a)
+   x2=(-b+Math.sqrt(delta))/(2*a)
+   alert("Delta é igual a "+delta+".\nE as raízes são: "+x1+" e "+x2)}
+   }
+ 
+   </script>
+
+
+   </body>
+  </html>
